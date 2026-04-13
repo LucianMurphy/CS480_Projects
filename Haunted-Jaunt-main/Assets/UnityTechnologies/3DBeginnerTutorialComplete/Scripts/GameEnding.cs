@@ -10,6 +10,7 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource caughtAudio;
+    //Particle system for the caught effect
     public ParticleSystem caughtEffect;
 
     bool m_IsPlayerAtExit;
@@ -28,6 +29,7 @@ public class GameEnding : MonoBehaviour
     public void CaughtPlayer ()
     {
         m_IsPlayerCaught = true;
+        //Trigger for the particles
         caughtEffect.Play();
     }
 
