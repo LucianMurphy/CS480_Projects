@@ -5,6 +5,13 @@ Team: James Smith, Jack Lund, Lucian Murphy
 
 
 /// LINEAR INTERPOLATION -- Lucian Murphy ///
+I used linear interpolation to make the brightness of the gargoyles like lessen and increase in a pulsing manner, and did the same thing for the gargoyles sight as well, lengthening and shortening it as the pulse of the light got brighter and darker. For the ghost I used lerp to chose a random brightness for the ghost every frame to create a flickering effect for the ghost. for the Lerp function I used the book and wikipedia to help me build it, and used Gemini to help me debug my code and figure out how to make my script attach to the entity I was working on.
+
+The idea for the pulse is the color starts out as off and the length of the sight is 0, and it increases by Time.deltaTime/2 each frame, which allows it to slowly increase until it hits f = 1, which then it decrease in the same manner until f = 0, and it repeats that process. 
+
+The ghost flicker is less intuitive because it just picks a random number between 0 and 1 and that ends up being the brightness of the ghost light for that frame.
+
+The new files for these are Ghost_Flicker.cs, Light_Increase.cs, and Gargoyle_sight_change.cs
 
 
 /// PARTICLES W TRIGGER -- James Smith ///
